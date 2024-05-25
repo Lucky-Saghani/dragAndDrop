@@ -1,5 +1,6 @@
-namespace App {
-    // Project State Management Class
+import { Project, ProjectStatus } from "../models/project.js";
+
+// Project State Management Class
 type Listerner<T> = (items: T[]) => void;
 
 class State<T> {
@@ -57,4 +58,3 @@ export class ProjectState extends State<Project> {
 }
 
 export const projectState = ProjectState.getInstance();
-}
